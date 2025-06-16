@@ -1,0 +1,110 @@
+name: EdenCells
+version: 1.0.0
+main: dev.lsdmc.EdenCells
+api-version: 1.21
+depend: [AdvancedRegionMarket]
+softdepend: [Vault]
+description: Cell door management and region integration for Eden
+author: LSDmc
+
+commands:
+  edencells:
+    description: Main plugin command
+    usage: |
+      /edencells reload - Reload the plugin configuration
+  door:
+    description: Manage cell doors
+    usage: |
+      /door <open|close|scan|locate|link|unlink|info|help> [region]
+      open - Open a cell door
+      close - Close a cell door
+      scan - Scan for nearby doors
+      locate - Find a specific door
+      link - Link a door to a region
+      unlink - Unlink a door from a region
+      info - View door information
+      help - Show this help message
+  cell:
+    description: Manage cells and cell groups
+    usage: |
+      /cell <info|purchase|members|reset|help> [region]
+      info - View cell information
+      purchase - Purchase a cell
+      members - Manage cell members
+      reset - Reset a cell
+      help - Show this help message
+  cellgroup:
+    description: Manage cell groups
+    usage: |
+      /cellgroup <create|delete|add|remove|list|listall|info|help> [name] [args...]
+      create <name> [displayName] - Create a new cell group
+      delete <name> - Delete a cell group
+      add <group> <regionId> - Add region to group
+      remove <group> <regionId> - Remove region from group
+      list <group> - List regions in group
+      listall - List all cell groups
+      info <group> - Show group information
+      help - Show this help message
+  cellnpc:
+    description: Manage cell block NPCs
+    usage: |
+      /cellnpc <create|remove|list|info|tp|help> [args...]
+      create <blockId> <displayName> - Create NPC at your location
+      remove <blockId> - Remove an NPC
+      list - List all NPCs
+      info <blockId> - Show NPC information
+      tp <blockId> - Teleport to an NPC
+      help - Show this help message
+
+permissions:
+  edencells.admin:
+    description: Admin permissions
+    default: op
+  edencells.admin.reset:
+    description: Reset player cells
+    default: op
+  edencells.admin.doors:
+    description: Link/unlink doors
+    default: op
+  edencells.admin.unlimited:
+    description: Bypass region limits
+    default: op
+  edencells.admin.groups:
+    description: Manage all cell groups
+    default: op
+  edencells.bypass.limits:
+    description: Bypass region limits
+    default: op
+  edencells.door.open:
+    description: Open doors remotely
+    default: true
+  edencells.door.close:
+    description: Close doors remotely
+    default: true
+  edencells.door.locate:
+    description: Locate doors
+    default: true
+  edencells.door.info:
+    description: Check door info
+    default: true
+  edencells.cell.info:
+    description: View cell information
+    default: true
+  edencells.cell.purchase:
+    description: Purchase cells
+    default: true
+  edencells.cell.members:
+    description: Manage cell members
+    default: true
+  edencells.cell.reset:
+    description: Reset own cells
+    default: true
+  edencells.group.create:
+    description: Create cell groups
+    default: true
+  edencells.group.delete:
+    description: Delete own cell groups
+    default: true
+  edencells.group.list:
+    description: List cell groups
+    default: true

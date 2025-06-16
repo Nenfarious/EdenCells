@@ -1,0 +1,121 @@
+# EdenCells Configuration File
+# Contains settings for the EdenCells plugin
+# -----------------------------
+
+# General plugin settings
+general:
+  # Enable debug mode for verbose logging
+  debug: true
+
+# Economy settings for member management
+economy:
+  member-add-cost: 100.0      # Cost to add a member to a cell
+  member-remove-cost: 50.0    # Cost to remove a member from a cell
+
+# Cell teleportation settings
+teleportation:
+  # Ranks that can teleport to donor cells for free from any NPC
+  free-teleport-ranks:
+    - "king"
+    - "emperor"
+    - "admin"
+  
+  # What constitutes a "donor cell" - cells with these prefixes are considered donor cells
+  donor-cell-prefixes:
+    - "donor"
+    - "vip"
+    - "premium"
+  
+  # Cost for regular teleportation (if economy is enabled)
+  teleport-cost: 50.0
+  
+  # Whether to require payment for teleportation (false = always free)
+  require-payment: true
+
+# Simplified door management system
+door-settings:
+  # Materials that will be treated as cell doors
+  materials:
+    - IRON_DOOR
+    - IRON_TRAPDOOR
+    - OAK_DOOR
+    - SPRUCE_DOOR
+    - BIRCH_DOOR
+    - JUNGLE_DOOR
+    - ACACIA_DOOR
+    - DARK_OAK_DOOR
+    - CRIMSON_DOOR
+    - WARPED_DOOR
+
+  # Audio settings for door interactions
+  play-sounds: true
+  open-sound: "BLOCK_IRON_DOOR_OPEN"
+  close-sound: "BLOCK_IRON_DOOR_CLOSE"
+  sound-volume: 1.0
+
+# Cell block settings
+cell-blocks:
+  # NPC settings for each cell block
+  npcs:
+    # Example NPC configuration:
+    # j:
+    #   world: "world"
+    #   x: 100.5
+    #   y: 64.0
+    #   z: 200.5
+    #   yaw: 90.0
+    #   pitch: 0.0
+
+# Keywords that trigger the cell GUI when found on signs
+cell-sign-keywords:
+  - "Cell"
+  - "Prison"
+  - "EdenCells"
+  - "[Cell]"
+
+# Region and member limits
+limits:
+  # Maximum regions a player can own (-1 = unlimited)
+  max-regions-per-player: 10
+
+  # Default maximum members per region
+  default-max-members: 5
+
+  # Maximum cell groups a player can create (-1 = unlimited)
+  max-groups-per-player: 5
+
+# GUI settings
+gui:
+  # Number of items to show per page in cell lists
+  items-per-page: 45
+
+  # Default sorting method (name, date, price)
+  default-sort: "name"
+
+  # Whether to show region prices in the GUI
+  show-prices: true
+
+  # Whether to show region expiration dates in the GUI
+  show-expiration: true
+
+# Cell group settings
+groups:
+  # Whether to enforce group-based teleport restrictions
+  restrict-teleports: true
+
+  # Whether to show group information in GUIs
+  show-in-gui: true
+
+  # Default settings for new groups
+  defaults:
+    # Maximum members per region in the group (-1 = use global setting)
+    max-members: -1
+    
+    # Maximum regions per player in the group (-1 = use global setting)
+    max-regions: -1
+    
+    # Whether to allow cross-group teleporting
+    allow-cross-teleport: false
+    
+    # Whether to inherit settings from parent group
+    inherit-parent: false
