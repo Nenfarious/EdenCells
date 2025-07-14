@@ -492,7 +492,7 @@ public final class CellManager {
             }
             
             double price = getPrice(cell);
-            if (price <= 0) {
+            if (price < 0) {
                 MessageUtils.sendError(player, "This cell is not for sale!");
                 return false;
             }
