@@ -1,0 +1,111 @@
+# ============================================
+#              CELL GROUPS CONFIGURATION
+#             Flexible Cell Group System
+# ============================================
+    
+  # J Ward cells - If you have J-ward cells, add them here
+  jcells:
+    display-name: "J Ward Cells"
+    regions: []  # Add actual J-cell region IDs that exist in-gaame
+    # Example: ["jcell1", "jcell2", "jcell3", ...]
+    # Use /cellgroup bulkadd jcells jcell* to add all jcell regions automatically
+    cell-limit: 1  # Max 1 J ward cell per player
+    teleport-cost: 100.0  # Standard teleport cost
+    permission: "edencells.ward.j"
+    
+  # Ward I - Second tier
+  icells:
+    display-name: "I Ward Cells"
+    regions: []  # Add region IDs here like: ["icell1", "icell2", "icell3"]
+    cell-limit: 1  # Max 1 I ward cell per player
+    teleport-cost: 90.0
+    permission: "edencells.ward.i"
+    
+  # Ward H - Third tier
+  hcells:
+    display-name: "H Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 H ward cell per player
+    teleport-cost: 80.0
+    permission: "edencells.ward.h"
+    
+  # Ward G - Fourth tier
+  gcells:
+    display-name: "G Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 G ward cell per player
+    teleport-cost: 70.0
+    permission: "edencells.ward.g"
+    
+  # Ward F - Fifth tier
+  fcells:
+    display-name: "F Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 F ward cell per player
+    teleport-cost: 60.0
+    permission: "edencells.ward.f"
+    
+  # Ward E - Sixth tier
+  ecells:
+    display-name: "E Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 E ward cell per player
+    teleport-cost: 50.0
+    permission: "edencells.ward.e"
+    
+  # Ward D - Seventh tier
+  dcells:
+    display-name: "D Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 D ward cell per player
+    teleport-cost: 40.0
+    permission: "edencells.ward.d"
+    
+  # Ward C - Eighth tier
+  ccells:
+    display-name: "C Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 C ward cell per player
+    teleport-cost: 30.0
+    permission: "edencells.ward.c"
+    
+  # Ward B - Ninth tier
+  bcells:
+    display-name: "B Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 B ward cell per player
+    teleport-cost: 20.0
+    permission: "edencells.ward.b"
+    
+  # Ward A - Highest tier
+  acells:
+    display-name: "A Ward Cells"
+    regions: []  # Add region IDs here
+    cell-limit: 1  # Max 1 A ward cell per player
+    teleport-cost: 0  # Free teleportation for A ward
+    permission: "edencells.ward.a"
+    
+  # King cells - Special VIP tier
+  kingcells:
+    display-name: "King Cells"
+    regions: []  # Add king cell region IDs here
+    cell-limit: 1  # Max 1 king cell per player
+    teleport-cost: 0  # Free teleportation for king rank
+    permission: "edencells.group.king"
+    
+  # Special donor cells
+  donorcells:
+    display-name: "Donor Cells"
+    regions: []  # Add donor region IDs here
+    is-donor: true
+    cell-limit: 1  # Max 1 donor cell per player
+    teleport-cost: 0  # Free teleportation for donors
+    permission: "edencells.donor"
+
+# Global cell limits
+limits:
+  # Maximum cells per player across all groups (-1 = no limit)
+  global: 15  # Increased to accommodate ward progression + donor cells
+
+# File version for automatic updates
+version: 1 
